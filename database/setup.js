@@ -3,6 +3,7 @@ require("dotenv").config();
 const connection = process.env.POSTGRES_URL;
 const sql = postgres(connection);
 
+
 const setupDB = async () => {
     await sql`CREATE TABLE IF NOT EXISTS users
               (
